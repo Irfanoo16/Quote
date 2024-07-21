@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 //icons
 import { FaRegHeart } from 'react-icons/fa'; // Unlike-icon
-import { IoShareSocialOutline } from 'react-icons/io5'; // share-icon
 import { MdOutlineWallpaper } from "react-icons/md"; // Theme-icon
 import { FcLike } from "react-icons/fc"; // like-icon
 
@@ -78,7 +77,6 @@ const Card = (props) => {
                   <FcLike style={{ fontSize: '1.3rem' }} onClick={() => handleDisLike({ quote: props.name })} />
                 )
             }
-            <IoShareSocialOutline title='Share' style={{ cursor: "pointer" }} onClick={handleShare} />
             <label>
               <MdOutlineWallpaper title='Theme' style={{ cursor: "pointer" }} />
               <input style={{ display: 'none' }} type="file" onChange={handleFile} />
