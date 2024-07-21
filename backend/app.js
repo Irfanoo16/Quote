@@ -115,6 +115,7 @@ app.post('/login', async function (req, res) {
     }
 });
 
+app.get('/',(req,res)=>res.send({status:"quote bank was launched"}));
 
 app.listen(3006, () => {
     console.log('Server is running on port ' + 3006);
