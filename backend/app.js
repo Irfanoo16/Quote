@@ -9,20 +9,6 @@ app.use(cors());
 require('dotenv').config();
 
 
-
-
-// app.post('/quotes/add', async function (req, res) {
-//     try {
-//         const db = await database();
-//         let collection = await db.collection('quotes');
-//         let response = await collection.insertMany(quotes)
-//         res.json(response)
-//     }
-//     catch (err) {
-//         console.log(err);
-//     }
-// })
-
 app.post('/quotes', async function (req, res) {
     try {
         console.log('quoetes');
