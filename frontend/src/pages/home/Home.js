@@ -25,7 +25,7 @@ function Home() {
         if (access === false) {
             navigate('/');
         }
-    }, []);
+    }, [navigate]);
 
 
     let titleCard = [
