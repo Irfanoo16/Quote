@@ -28,7 +28,7 @@ export default function Login() {
         event.preventDefault()
         if (authStatus) {
             setAuthStatus(!authStatus)
-            const response = await axios.post('https://quote-3.onrender.com/register', register, {
+            await axios.post('https://quote-3.onrender.com/register', register, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
