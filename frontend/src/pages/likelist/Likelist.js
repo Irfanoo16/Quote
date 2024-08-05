@@ -28,7 +28,7 @@ export default function Quote() {
         if (access === false) {
             navigate('/');
         }
-        getQuote()
+        getQuote();
     }, [navigate,getQuote]);
 
     return (
