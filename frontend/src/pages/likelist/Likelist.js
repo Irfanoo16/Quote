@@ -29,7 +29,7 @@ export default function Quote() {
             navigate('/');
         }
         getQuote();
-    }, [navigate,getQuote]);
+    }, [navigate]);
 
     return (
         <>
