@@ -13,7 +13,10 @@ export default function Quote() {
     let navigate = useNavigate()
     let [list, setList] = useState([]);
 
-    const getQuote = async () => {
+   
+
+    useEffect(() => {
+         const getQuote = async () => {
         let response = await axios.post('https://quote-3.onrender.com/liked/list', params, {
             headers: {
                 'Content-Type': 'application/json'
@@ -21,8 +24,6 @@ export default function Quote() {
         });
         setList(response.data)
     }
-
-    useEffect(() => {
         let access = JSON.parse(localStorage.getItem('status'));
         if (access === false) {
             navigate('/');
