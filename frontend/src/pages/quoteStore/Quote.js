@@ -28,7 +28,7 @@ export default function Quote() {
             navigate('/');
         }
         getQuote()
-    }, [navigate]);
+    }, [navigate,getQuote]);
 
 
     return (
