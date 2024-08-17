@@ -15,21 +15,25 @@ export default function Quote() {
 
    
 
+   const getQuote = async () => {
+        try {
+            let response = await axios.post('https://quotebankservice.onrender.com/liked/list', params, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            setList(response.data);
+        } catch (error) {
+            console.error('Error fetching quotes:', error);
+        }
+    };
     useEffect(() => {
-         const getQuote = async () => {
-        let response = await axios.post('https://quote-3.onrender.com/liked/list', params, {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-        setList(response.data)
-    }
         let access = JSON.parse(localStorage.getItem('status'));
         if (access === false) {
             navigate('/');
         }
         getQuote();
-    }, [navigate]);
+    }, [navigate]); // Add 'navigate' as a dependency
 
     return (
         <>
